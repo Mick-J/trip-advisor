@@ -13,7 +13,7 @@ A Docker image can be created using a Java 21+ runtime:
 ```
 FROM bellsoft/liberica-openjdk-alpine:21
 WORKDIR app
-ADD https://github.com/Mick-J/trip-advisor/tree/main/trip-advisor/external-service/external-service.jar
+ADD https://github.com/Mick-J/trip-advisor/tree/main/external-service/external-service.jar
 CMD java -jar external-services.jar
 ```
 Build the image:

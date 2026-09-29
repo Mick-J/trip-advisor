@@ -67,7 +67,7 @@ A Docker image can be created using a Java 21+ runtime:
 ```
 FROM bellsoft/liberica-openjdk-alpine:21
 WORKDIR app
-ADD https://github.com/Mick-J/trip-advisor/tree/main/trip-advisor/external-service/external-service.jar
+ADD https://github.com/Mick-J/trip-advisor/tree/main/external-serviceexternal-service.jar
 CMD java -jar external-services.jar
 ```
 
@@ -195,7 +195,7 @@ Where:
 
 ### Aggregation report
 
-![Aggregation report](image/test_jmeter/trip-endpoint/platform-Thread-Aggregation-report.png)
+![Aggregation report](image/test_jmeter/trip-endpoint/platform-thread-aggregation-report.png)
 
 ### 2.2.2. Virtual Threads results
 
@@ -250,7 +250,9 @@ or approximately:
 
 The experiment therefore provides a practical demonstration of how changing the Spring thread configuration can affect application behavior under concurrent load.
 
-## Reference
+## References
 
+- https://medium.com/@gauravrmsc/virtual-threads-under-the-hood-carriers-pinning-scaling-5638e6fbbd66
 - https://vfunction.com/blog/application-scalability/
 - https://www.udemy.com/course/java-virtual-thread/
+- https://www.udemy.com/course/java-multithreading-concurrency-performance-optimization/
