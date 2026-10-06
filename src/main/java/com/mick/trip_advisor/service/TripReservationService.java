@@ -29,7 +29,7 @@ public class TripReservationService {
         var flights = this.searchServiceClient.getFlights(request.departure(), request.arrival());
         var bestDeal = flights.stream().min(Comparator.comparingInt(Flight::price));
         var flight = bestDeal.orElseThrow(() -> new IllegalArgumentException("no Flights found"));
-        var reservationRequest = new FlightReservationRequest(request.departure(), request.arrival(), flight.flightNumber(), request.date());
+        var reservationRequest = new FlightReservationRequest(request.departure(), request.arrival(), flight.flightNumber(), request.tripDate());
         return this.reservationServiceClient.reserve(reservationRequest);
     }
 }

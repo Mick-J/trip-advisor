@@ -5,6 +5,6 @@ import java.time.LocalDate;
 public record Flight(String flightNumber,
                      String airline,
                      int price,
-                     LocalDate date,
+                     LocalDate tripDate,
                      int flightDurationInMinutes) {
 }

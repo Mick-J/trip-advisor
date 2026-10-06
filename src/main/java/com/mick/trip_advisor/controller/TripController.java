@@ -23,7 +23,6 @@ public class TripController {
 
     @GetMapping("{airportCode}")
     public TripPlan planTrip(@PathVariable("airportCode") String airportCode) {
-//         log.info("airport code: {}, is virtual: {}", airportCode, Thread.currentThread().isVirtual());
         return this.planService.getTripPlan(airportCode);
     }
 
